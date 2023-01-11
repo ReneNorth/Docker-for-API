@@ -4,8 +4,7 @@ from dotenv import load_dotenv
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__name__)))
-load_dotenv(dotenv_path=os.path.join(ROOT_DIR, 'INFRA_SP2/infra/.env'))
+load_dotenv(dotenv_path=os.path.abspath(os.path.join(BASE_DIR, f'{os.pardir}/infra/.env')))
 
 
 SECRET_KEY = os.getenv('DJANGO_KEY')
@@ -97,8 +96,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_L10N = True
-
-# USE_TZ = True
 
 
 STATIC_URL = '/static/'
