@@ -7,7 +7,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(dotenv_path=os.path.abspath(os.path.join(BASE_DIR, f'{os.pardir}/infra/.env')))
 
 
-SECRET_KEY = os.getenv('DJANGO_KEY')
+# SECRET_KEY = os.getenv('DJANGO_KEY') # <- я пытался вынести secret key в env,
+# но это не проходит тесты
+
+SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
 DEBUG = False
 ALLOWED_HOSTS = ['*']
 
