@@ -19,6 +19,7 @@ API для сервиса о произведениях искусства.
 ### Запуск 
 
 - Установите docker 
+- в директории /infra создайте .env с 
 - Из директории infra/ запустите docker-compose up -d --build 
 - После успешной сборки запустите по очереди команды: 
     docker-compose exec web python manage.py migrate
